@@ -1,0 +1,211 @@
+/* ============================================
+   ANIMATIONS.CSS - Smooth Animations & Effects
+   ============================================ */
+
+/* === FADE IN ANIMATION === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* === SLIDE IN FROM LEFT === */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+/* === SLIDE IN FROM RIGHT === */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* === GLOW PULSE ANIMATION === */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    }
+    50% {
+        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    }
+}
+
+.glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* === FLOAT ANIMATION === */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* === SCALE ON HOVER === */
+.scale-hover {
+    transition: transform var(--transition-normal);
+}
+
+.scale-hover:hover {
+    transform: scale(1.05);
+}
+
+/* === ROTATE ON HOVER === */
+.rotate-hover {
+    transition: transform var(--transition-normal);
+}
+
+.rotate-hover:hover {
+    transform: rotate(5deg);
+}
+
+/* === SHIMMER EFFECT === */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 240, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+}
+
+/* === TYPING ANIMATION === */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid var(--color-primary);
+    white-space: nowrap;
+    animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* === GRADIENT ANIMATION === */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* === BOUNCE ANIMATION === */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* === REVEAL ANIMATION === */
+@keyframes reveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.reveal {
+    animation: reveal 1s ease-out forwards;
+}
+
+/* === STAGGER ANIMATION DELAYS === */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* === SMOOTH TRANSITIONS === */
+.transition-all {
+    transition: all var(--transition-normal);
+}
+
+.transition-fast {
+    transition: all var(--transition-fast);
+}
+
+.transition-slow {
+    transition: all var(--transition-slow);
+}

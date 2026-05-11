@@ -1,0 +1,21 @@
+# Videos Directory
+
+Place your work experience videos here.
+
+## Required Videos:
+- experience1.mp4 - Live Stream Production video
+- experience2.mp4 - Media Production video
+- experience3.mp4 - Gaming Content Creation video
+
+## Video Guidelines:
+- **Format**: MP4 (H.264 codec recommended)
+- **Resolution**: 1920x1080 (Full HD) or 1280x720 (HD)
+- **File Size**: Under 50MB per video
+- **Duration**: 30 seconds to 2 minutes recommended
+- **Aspect Ratio**: 16:9 (landscape)
+
+## Optimization Tips:
+- Use video compression tools (HandBrake, Adobe Media Encoder)
+- Keep bitrate reasonable (2-5 Mbps for web)
+- Ensure audio is clear and balanced
+- Add captions if possible for accessibility

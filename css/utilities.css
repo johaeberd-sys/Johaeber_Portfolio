@@ -1,0 +1,302 @@
+/* ============================================
+   UTILITIES.CSS - Reusable Utility Classes
+   ============================================ */
+
+/* === CSS VARIABLES === */
+:root {
+    /* Colors - Simple & Professional Theme */
+    --color-primary: #2563eb;
+    --color-primary-dark: #1e40af;
+    --color-secondary: #f8fafc;
+    --color-dark: #ffffff;
+    --color-darker: #f1f5f9;
+    --color-light: #0f172a;
+    --color-gray: #475569;
+    --color-gray-light: #1e293b;
+    --color-gray-dark: #64748b;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 6rem;
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-xs: 0.875rem;
+    --font-size-sm: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 3rem;
+    --font-size-hero: 4rem;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    --shadow-glow-strong: 0 4px 12px rgba(37, 99, 235, 0.15);
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 50%;
+}
+
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--color-gray);
+    background-color: var(--color-dark);
+    overflow-x: hidden;
+}
+
+/* === CONTAINER === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* === SECTION SPACING === */
+section {
+    padding: var(--spacing-xxl) 0;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-light);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--font-size-hero);
+}
+
+h2 {
+    font-size: var(--font-size-xxl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+    font-size: var(--font-size-lg);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-normal);
+}
+
+/* === BUTTONS === */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+/* === CARDS === */
+.card {
+    background-color: var(--color-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    transition: var(--transition-normal);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-primary);
+}
+
+/* === SECTION TITLES === */
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    box-shadow: var(--shadow-glow);
+}
+
+.subsection-title {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+/* === GRID LAYOUTS === */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+/* === FLEX UTILITIES === */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* === SPACING UTILITIES === */
+.mt-1 { margin-top: var(--spacing-sm); }
+.mt-2 { margin-top: var(--spacing-md); }
+.mt-3 { margin-top: var(--spacing-lg); }
+
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+
+.pt-1 { padding-top: var(--spacing-sm); }
+.pt-2 { padding-top: var(--spacing-md); }
+.pt-3 { padding-top: var(--spacing-lg); }
+
+.pb-1 { padding-bottom: var(--spacing-sm); }
+.pb-2 { padding-bottom: var(--spacing-md); }
+.pb-3 { padding-bottom: var(--spacing-lg); }
+
+/* === TEXT UTILITIES === */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+.text-gray {
+    color: var(--color-gray);
+}
+
+/* === RESPONSIVE UTILITIES === */
+@media (max-width: 768px) {
+    :root {
+        --font-size-hero: 2.5rem;
+        --font-size-xxl: 2rem;
+        --font-size-xl: 1.5rem;
+        --spacing-xxl: 3rem;
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-hero: 2rem;
+        --font-size-xxl: 1.5rem;
+    }
+}

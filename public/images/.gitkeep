@@ -1,0 +1,11 @@
+# Image Directory
+
+Place your project images here:
+- hero.png - Your profile/hero image
+- project1.png - First project screenshot
+- project2.png - Second project screenshot
+- project3.png - Third project screenshot
+
+Recommended image sizes:
+- Hero image: 400x400px (square)
+- Project images: 800x400px (2:1 ratio)
